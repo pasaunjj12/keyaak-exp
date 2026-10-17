@@ -1,0 +1,442 @@
+
+/* =====================================
+   THE KEYAAK EXPERIENCE
+   LUXURY EDITORIAL LINK WEBSITE
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --black: #171117;
+  --pink: #e8a8c6;
+  --soft-pink: #f9e7f0;
+  --deep-pink: #a84c7b;
+  --white: #ffffff;
+  --cream: #fff9fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--black);
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.site-header {
+  padding: 45px 20px 35px;
+  text-align: center;
+  background: var(--white);
+}
+
+.brand-label {
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: var(--deep-pink);
+  margin-bottom: 12px;
+}
+
+.site-header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+.brand-tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--deep-pink);
+  margin-top: 12px;
+}
+
+/* =====================================
+   EDITORIAL COLLAGE
+===================================== */
+
+.collage-section {
+  position: relative;
+  padding: 55px 25px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 25%,
+      rgba(255, 255, 255, 0.65),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(168, 76, 123, 0.24),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #f8d9e9 0%,
+      #e8a8c6 45%,
+      #b96a96 100%
+    );
+}
+
+.collage-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1250px;
+  min-height: 630px;
+  margin: auto;
+  isolation: isolate;
+}
+
+/* SHARED PORTRAIT STYLING */
+
+.portrait {
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: transform 0.5s ease;
+}
+
+.portrait:hover img {
+  transform: scale(1.04);
+}
+
+/* LARGE CENTER PORTRAIT */
+
+.portrait-center {
+  width: 39%;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.portrait-center img {
+  object-position: center 20%;
+}
+
+/* SMALLER LEFT PORTRAIT */
+
+.portrait-left {
+  width: 27%;
+  height: 380px;
+  left: 5%;
+  top: 52%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.portrait-left img {
+  object-position: 35% center;
+}
+
+/* SMALLER RIGHT PORTRAIT */
+
+.portrait-right {
+  width: 27%;
+  height: 380px;
+  right: 5%;
+  top: 52%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.portrait-right img {
+  object-position: 65% center;
+}
+
+/* =====================================
+   INTRODUCTION
+===================================== */
+
+.experience-intro {
+  padding: 85px 25px 65px;
+  text-align: center;
+  background: var(--white);
+}
+
+.section-label {
+  color: var(--deep-pink);
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.experience-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.experience-intro > p:last-child {
+  max-width: 680px;
+  margin: auto;
+  line-height: 1.9;
+  font-size: 15px;
+  color: #5c5058;
+}
+
+/* =====================================
+   PLATFORM LINKS
+===================================== */
+
+.links-section {
+  padding: 75px 20px 95px;
+  text-align: center;
+
+  background: linear-gradient(
+    to bottom,
+    #fff9fc,
+    #f7dce9
+  );
+}
+
+.links-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.links-description {
+  font-size: 14px;
+  color: #6d5362;
+  margin-bottom: 40px;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 520px;
+  margin: auto;
+}
+
+.luxury-link {
+  display: block;
+  padding: 19px 25px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--black);
+  border: 1px solid var(--deep-pink);
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.luxury-link:hover,
+.luxury-link:focus-visible {
+  background: var(--black);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.luxury-link[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+
+.links-note {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #826b79;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.site-footer {
+  padding: 45px 20px;
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.7rem;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+
+.site-footer p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+  .collage-container {
+    min-height: 500px;
+  }
+
+  .portrait-center {
+    width: 48%;
+    height: 470px;
+  }
+
+  .portrait-left,
+  .portrait-right {
+    width: 30%;
+    height: 300px;
+  }
+
+  .portrait-left {
+    left: 1%;
+  }
+
+  .portrait-right {
+    right: 1%;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    padding: 35px 15px 25px;
+  }
+
+  .site-header h1 {
+    font-size: clamp(2.9rem, 11vw, 4.3rem);
+  }
+
+  .brand-tagline {
+    font-size: 14px;
+  }
+
+  .collage-section {
+    padding: 35px 8px;
+  }
+
+  .collage-container {
+    min-height: 390px;
+  }
+
+  .portrait-center {
+    width: 54%;
+    height: 365px;
+  }
+
+  .portrait-left,
+  .portrait-right {
+    width: 29%;
+    height: 225px;
+    top: 52%;
+  }
+
+  .portrait-left {
+    left: 0;
+  }
+
+  .portrait-right {
+    right: 0;
+  }
+
+  .experience-intro {
+    padding: 60px 20px 50px;
+  }
+
+  .links-section {
+    padding: 60px 20px 75px;
+  }
+
+  .luxury-link {
+    padding: 17px 14px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .footer-brand {
+    font-size: 2.3rem;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE - 320px
+===================================== */
+
+@media (max-width: 375px) {
+
+  .collage-container {
+    min-height: 310px;
+  }
+
+  .portrait-center {
+    height: 290px;
+  }
+
+  .portrait-left,
+  .portrait-right {
+    height: 180px;
+  }
+
+  .brand-label,
+  .section-label {
+    letter-spacing: 2px;
+  }
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .portrait img,
+  .luxury-link {
+    transition: none;
+  }
+}
